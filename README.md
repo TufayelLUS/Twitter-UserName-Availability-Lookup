@@ -2,5 +2,5 @@
 Checks for availability of twitter account using twitter web api.
 # Usage
 * install python
-* set username in the code for lookup
+* set username in the code for lookup and start execution
 * or run as python lookup.py -u username
