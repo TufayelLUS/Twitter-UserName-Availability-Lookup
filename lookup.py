@@ -37,7 +37,10 @@ def look(username):
     except:
         try:
             err = resp["errors"][0]["message"]
-            print(err)
+            if "Not found" == err:
+                print("Username is available")
+            else:
+                print(err)
         except:
             print("Username is available")
         # this block of code(finally) can be removed if you dont need server response
