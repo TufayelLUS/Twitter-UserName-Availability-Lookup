@@ -1,4 +1,4 @@
-# Twitter-UserName-Availability-Lookup
+# Twitter Username Availability Lookup Kit
 Checks for availability of twitter account using twitter web api.
 # Usage
 * Install python
