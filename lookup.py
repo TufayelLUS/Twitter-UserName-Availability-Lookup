@@ -1,6 +1,10 @@
 # Tested on 12-03-2020 1:42PM
 # Contact: facebook.com/cse.tufayel
 # Changes on twitter website will break down code and developer takes no responsibilities hereby
+# Runs in 3 modes.
+# 1. Direct code edit mode
+# 2. Console mode (python lookup.py -u username)
+# 3. Mass check mode (python lookup.py -l list.txt)
 import requests
 import json
 import sys
@@ -45,6 +49,14 @@ def look(username):
             print("*"*30)
 
 if len(sys.argv) > 2:
-    look(sys.argv[2])
+    if sys.argv[1] == "-l":
+        try:
+            user_list = open(sys.argv[2], "r").read().split("\n")
+            for username in user_list:
+                look(username)
+        except:
+            print("Recheck input file name again")
+    else:
+        look(sys.argv[2])
 else:
     look(username)
