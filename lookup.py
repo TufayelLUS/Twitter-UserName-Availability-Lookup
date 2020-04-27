@@ -31,7 +31,7 @@ def look(username):
         }
     resp  = json.loads(requests.get(url, headers=headers).text)
     # you can play around with resp variable output and get other profile info
-    # such as follower, bio, display name, account creator time etc.
+    # such as follower, bio, display name, account creation time etc.
     try:
         print("Username unavailable since " + resp["data"]["user"]["legacy"]["created_at"])
     except:
